@@ -49,3 +49,8 @@ Execute
 ```sh
 $ ./web3-kotlin-1.0.0/bin/web3-kotlin --port 9000
 ```
+
+Run as website or as json api, use `--mode` to change the mode of execution. `site` for website or `api` for json api
+```shell
+
+```

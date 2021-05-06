@@ -20,6 +20,8 @@ class EthRepo(
         val gasPrice: BigInteger
     )
 
+    data class AccountBalancePair(val account: String, val balance: BigInteger)
+
     fun getEthAccounts(): List<String> {
         return web3.ethAccounts().send().accounts
     }
@@ -33,8 +35,8 @@ class EthRepo(
         return web3.ethGetBalance(account, blockParameter).send().balance
     }
 
-    fun getAllEthAccountsBalance(): Collection<Pair<String, BigInteger>> {
-        return getEthAccounts().map { it to getEthAccountBalance(it) }
+    fun getAllEthAccountsBalance(): Collection<AccountBalancePair> {
+        return getEthAccounts().map { AccountBalancePair(it, getEthAccountBalance(it)) }
     }
 
     fun getNetworkInfo(): NetworkInfo {

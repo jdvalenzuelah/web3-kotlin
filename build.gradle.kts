@@ -30,6 +30,10 @@ dependencies {
     implementation("com.github.kwebio:kweb-core:0.8.6")
     implementation("com.github.ajalt.clikt:clikt:3.1.0")
 
+    implementation("org.http4k:http4k-core:4.8.0.0")
+    implementation("org.http4k:http4k-server-apache4:4.8.0.0")
+    implementation("org.http4k:http4k-format-jackson:4.8.0.0")
+
     testImplementation(kotlin("test"))
     testImplementation(kotlin("test-junit"))
 }

@@ -25,7 +25,7 @@ class TransactionsApp(
 
     val server: Kweb
 
-    private val accounts: KVar<Collection<Pair<String, BigInteger>>>
+    private val accounts: KVar<Collection<EthRepo.AccountBalancePair>>
     private val transfer: KVar<TransferInfo>
     private val network: KVar<EthRepo.NetworkInfo>
 
